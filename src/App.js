@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Header from "./components/Layout/Header";
 import VoterList from "./components/Layout/VoterList";
 import InputForm from "./components/Layout/InputForm";
+import CandidateProvider from "./store/CandidateProvider";
 
 function App() {
   const [showForm, setShowForm] = useState(false)
@@ -13,11 +14,14 @@ function App() {
     setShowForm(false);
   }
   return (
-    <div className="App">
+    <>
+    <CandidateProvider>
       {showForm && <InputForm onHideForm={hideFormHandler}/>}
         <Header onShowForm= {showFormHandler}/>
         <VoterList/>
-    </div>
+  
+    </CandidateProvider>
+    </>
   );
 }
 

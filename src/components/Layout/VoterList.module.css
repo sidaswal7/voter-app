@@ -10,3 +10,12 @@ ul{
 li {
     margin-top: 30px;
 }
+.flex{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+.btn {
+    margin-left: 15px;
+    padding: -10px 5px;
+}
